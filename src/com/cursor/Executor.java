@@ -4,7 +4,6 @@ import com.cursor.database.LibraryReport;
 
 import java.time.LocalDate;
 
-
 public class Executor {
     public static void start() {
         LibraryReport libraryReport = new LibraryReport();

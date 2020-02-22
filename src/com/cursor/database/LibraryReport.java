@@ -22,13 +22,14 @@ public class LibraryReport implements Runnable {
         lock.unlock();
     }
 
-    public void getByDate(LocalDate date) {
+    public String getByDate(LocalDate date) {
         String bookByDate = dateToBookMap.get(date);
         if (bookByDate == null) {
             System.out.println("There are no books for this date.");
         } else {
             System.out.println("The book for this day is '" + bookByDate + "'");
         }
+        return bookByDate;
     }
 
     public void showUsingDates() {
@@ -45,6 +46,6 @@ public class LibraryReport implements Runnable {
     public void run() {
         showUsingTitles();
         showUsingDates();
-        getByDate(LocalDate.of(2020, 11, 23));
+        getByDate(LocalDate.of(2020, 4, 23));
     }
 }
